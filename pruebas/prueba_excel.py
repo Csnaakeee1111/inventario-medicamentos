@@ -3,6 +3,9 @@ Uso:  QT_QPA_PLATFORM=offscreen .venv/bin/python pruebas/prueba_excel.py
 """
 import os
 import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import tempfile
 import time
 from datetime import date, datetime, timedelta

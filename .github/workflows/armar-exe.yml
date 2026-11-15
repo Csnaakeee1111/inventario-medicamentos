@@ -41,6 +41,8 @@ jobs:
       - name: Pruebas (movimientos y pantallas)
         env:
           QT_QPA_PLATFORM: offscreen
+          PYTHONUTF8: "1"
+          PYTHONIOENCODING: utf-8
         run: |
           python pruebas/prueba_movimientos.py
           python pruebas/prueba_pantallas.py
